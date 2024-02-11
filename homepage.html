@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Subnetz Rechner</title>
+</head>
+<body>
+    <h1>Subnetzrechner</h1>
+    <form id="subnetCalculator">
+        <!-- Eingabe von IP-Adresse -->
+        <label for="ipAddress">IP-Adresse:</label>
+        <input type="text" id="ipAddress" name="ipAddress" placeholder="z.B. 192.168.23.0"><br><br>
+        
+        <!-- Eingabe von CIDR -->
+        <label for="cidrSuffix">CIDR-Suffix: /</label>
+        <input type="text" id="cidrSuffix" name="cidrSuffix" placeholder="z.B. 24"><br><br>
+
+        <button type="button" onclick="calculateSubnet()">Berechnen</button>
+    </form>
+
+    <div id="results"> <!-- hier soll das Ergebnis angezeigt -->
+
+    </div>
+
+    <script src="calculate.js"></script>
+</body>
+</html>
